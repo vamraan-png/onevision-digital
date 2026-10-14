@@ -44,8 +44,8 @@ function App() {
       `Name: ${form.name}\nBusiness: ${form.business || "Not provided"}\nInterested in: ${form.service}\n\nProject details:\n${form.message}`
     );
     // Replace this demo address with your real business email before publishing.
-    window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
-    setNotice("Your email app should open with the enquiry prepared. Add your real business email before publishing.");
+    window.location.href = `mailto:vamraan@gmail.com?subject=${subject}&body=${body}`;
+    setNotice("Your email app should open with the enquiry prepared. If it doesn't, check your email app settings.");
   }
 
   return (
@@ -194,11 +194,27 @@ function App() {
               <h2>Have a project<br />in mind?</h2>
               <p>Tell us a little about your business or the problem you want to solve. We'll take it from there.</p>
               <div className="contact-detail"><div className="contact-detail-icon"><MapPin size={18} /></div><div><span>LOCAL FOCUS</span><strong>Warangal · Hanamkonda · Kazipet</strong></div></div>
-              <div className="contact-detail"><div className="contact-detail-icon"><Mail size={18} /></div><div><span>EMAIL</span><strong>hello@example.com</strong><small>Demo address — replace before publishing</small></div></div>
+              <div className="contact-detail">
+  <div className="contact-detail-icon">
+    <Mail size={18} />
+  </div>
+  <div>
+    <span>EMAIL</span>
+    <strong>
+      <a href="mailto:vamraan@gmail.com">vamraan@gmail.com</a>
+    </strong>
+    <small>Contact us about your project</small>
+  </div>
+</div>
               <div className="social-links">
-                <a href="#contact" aria-label="Instagram placeholder" onClick={(e) => { e.preventDefault(); setNotice("Add your real Instagram profile link in src/App.jsx before publishing."); }}><span className="social-letter">ig</span></a>
-                <a href="#contact" aria-label="Facebook placeholder" onClick={(e) => { e.preventDefault(); setNotice("Add your real Facebook page link in src/App.jsx before publishing."); }}><span className="social-letter">f</span></a>
-                <a href="#contact" aria-label="WhatsApp placeholder" onClick={(e) => { e.preventDefault(); setNotice("Add your WhatsApp Business number in src/App.jsx before publishing."); }}><MessageCircle size={18} /></a>
+               <a
+  href="https://wa.me/919515926945"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with OneVision Digital on WhatsApp"
+>
+  <MessageCircle size={18} />
+</a>
               </div>
             </div>
             <form className="contact-form" onSubmit={submitEnquiry}>
